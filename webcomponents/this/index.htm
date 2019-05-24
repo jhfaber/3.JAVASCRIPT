@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button onclick="foo()">boton</button>
+    <script type="text/javascript" src="js-file.js"></script>
+    <script>
+        // var bar = new foo();
+        // bar.log()
+        // bar;
+        
+        function foo(){
+            this.a ='a';
+            // console.log(this)
+            console.log(this.a);
+            this.log = function () {
+                // console.log(this);
+                console.log(this.a);
+            }
+        }
+
+        const video = {
+            title: 'a',
+            tags: ['a','b', 'c'],
+            showTags() {
+                this.tags.forEach(function(tag){
+                    console.log(tag)
+            });
+            }
+        };
+
+        video.showTags();
+    
+    </script>
+</body>
+</html>
+
